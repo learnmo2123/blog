@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$title2}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{C('domain.main')}/public/favicon.ico">
+    <link href="{C('domain.main')}/public/home/css/base.css" rel="stylesheet">
+    <link href="{C('domain.main')}/public/home/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pagination.css">
+    <link href="{C('domain.main')}/public/home/css/m.css" rel="stylesheet">
+    <script src="{C('domain.main')}/public/home/js/jquery.min.js" type="text/javascript"></script>
+    <script src="{C('domain.main')}/public/home/js/jquery.easyfader.min.js"></script>
+    <script src="{C('domain.main')}/public/home/js/scrollReveal.js"></script>
+    <script src="{C('domain.main')}/public/home/js/common.js"></script>
+    <script src="{C('domain.main')}/public/home/js/page.js"></script>
+    <!--[if lt IE 9]>
+    <script src="{C('domain.main')}/public/home/js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <!--menu begin-->
+    <div class="menu" style="position:relative">
+        <nav class="nav" id="topnav">
+            <h1 class="logo"><a href="#">编程语言学习博客</a></h1>
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=showIndex">网站首页</a> </li>
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=showFabu">发布博文</a> </li>
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=showYouzhi">优质博文</a>  </li>
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=showLiuyan">留言</a> </li>
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=showDevelop">系统开发流程</a> </li>
+            {if !isset($smarty.session.home)}
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=showLogin">登录</a> </li>
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=showRegister">注册</a> </li>
+            {/if}
+            {if isset($smarty.session.home)}
+            <li><a href="{C('domain.main')}/index.php?p=home&m=index&a=logout" onClick="return confirm('确定退出系统吗?：{$smarty.session.home.nickname}');">退出</a> </li>
+            {/if}
+            <li><a href="{C('domain.main')}/index.php?p=admin&m=privilege&a=loginShow">后台</a> </li>
+            <!--search begin-->
+            {if $title2 == '编程语言学习博客'}
+            <div id="search_bar" class="search_bar" style="width:200px;position:absolute;margin-left:1000px;">
+                <form  id="searchform" action="{C('domain.main')}/index.php?p=home&m=index&a=showIndex" method="post" name="searchform">
+                    <input placeholder="请输入博文标题" type="text" name="title1"  value="{$title1}" style="position:absolute;margin-top:15px;width:120px;height:29px;padding-left:3px;">
+                    <input type="submit" value="搜索" style="border:0px;position:absolute;margin-left:123px;margin-top:15px;padding:5px 20px;height:33px;background:deepskyblue;color:white;">
+                </form>
+            </div>
+            {/if}
+            <!--头像-->
+            <div style="position:absolute;margin-left:-75px;margin-top:15px;">
+                {if isset($smarty.session.home)}
+                <img src="{$smarty.session.home.headimg}" title="{$smarty.session.home.nickname}已登录哦" style="width:50px;height:50px;border-radius:50%;">
+                {else}
+                <img src="{C('domain.main')}/public/home/images/headimg.jpg" title="您还未登录哦" style="width:50px;height:50px;border-radius:50%;">
+                {/if}
+            </div>
+            <!--search end-->
+        </nav>
+    </div>
+    <!--menu end-->
+</header>

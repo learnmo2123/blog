@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>分类管理</title>
+    <link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pintuer.css">
+    <link rel="stylesheet" href="{C('domain.main')}/public/admin/css/admin.css">
+    <script src="{C('domain.main')}/public/admin/js/jquery.js"></script>
+    <script src="{C('domain.main')}/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong> 分类信息</strong></div>
+  <div class="padding border-bottom">  
+  <a class="button border-yellow" href=""> 分类列表</a>
+  </div> 
+  <table class="table table-hover text-center">
+    <tr>
+      <th width="25%">ID</th>
+      <th align="left">分类名称</th>
+      <th>父类id</th>
+      <th width="250">操作</th>
+    </tr>
+   {foreach from=$cats item='cat'}
+    <tr>
+      <td align="left" style="padding-left:30px;">{$cat.id}</td>
+      <td align="left" style="padding-left:50px;">{str_repeat('---',$cat.level)}{$cat.name}</td>
+      <td>{$cat.parent_id}</td>
+      <td>
+      <div class="button-group">
+      <a type="button" class="button border-main" href="{C('domain.main')}/index.php?p=admin&m=cat&a=editCatShow&id={$cat.id}">修改</a>
+       <a class="button border-red" href="{C('domain.main')}/index.php?p=admin&m=cat&a=deleteCat&id={$cat.id}" onClick="return confirm('确定删除当前博文：{$cat.name}?');"> 删除</a>
+      </div>
+      </td>
+    </tr>
+    {/foreach}
+  </table>
+</div>
+</body></html>

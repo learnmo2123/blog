@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title>评论管理</title>
+<link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="{C('domain.main')}/public/admin/css/admin.css">
+<link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pagination.css">
+<script src="{C('domain.main')}/public/admin/js/jquery.js"></script>
+<script src="{C('domain.main')}/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong> 评论列表</strong></div>
+  <div class="padding border-bottom">  
+  <button type="button" class="button border-yellow" > 评论信息</button>
+  </div>
+  <table class="table table-hover text-center" style="table-layout:fixed;">
+    <tr>
+      <th width="5%">序号</th>
+      <th width="5%">ID</th>
+      <th width="8%">用户昵称</th>
+      <th width="8%">评论文章标题</th>
+      <th width="35%">评论的内容</th>
+      <th width="15%">评论时间</th>
+      <th width="18%">操作</th>
+    </tr>
+   {foreach from=$comments key='comments_key' item='comment'}
+    <tr>
+      <td>{$firstNum+$comments_key}</td>
+      <td>{$comment.id}</td>
+      <td>{$comment.user_nickname}</td>
+      <td>{$comment.article_title}</td>
+      <td style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">{$comment.content}</td>
+      <td>{date('Y-m-d H:i',$comment.post_date)}</td>
+      <td><div class="button-group">
+      <a class="button border-red" href="{C('domain.main')}/index.php?p=admin&m=comment&a=deleteComment&id={$comment.id}" onClick="return confirm('确定删除当前评论吗?：{$comment.user_nickname}');"> 删除</a>
+      </div></td>
+    </tr>
+  {/foreach}
+  </table>
+</div>
+<ul class="pagination">
+  <li>{$pageHtml}</li>
+</ul>
+</body></html>

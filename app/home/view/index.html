@@ -1,0 +1,66 @@
+{include file="Common/head.html"}
+<article>
+  <a id="asd"></a>  <!--跳转到顶部-->
+  <div class="blank"></div>
+  <!--首页中间博文展示区开始-->
+  <div class="blogsbox">
+    {foreach from=$articles item='article'}
+    <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+      <h3 class="blogtitle"><a href="#" target="_blank">{$article.title}</a></h3>
+      <p class="blogtext">{$article.intro}</p>
+      <div class="bloginfo">
+        <ul>
+          <li class="author"><a href="#">{$article.user_nickname}</a></li>
+          <li class="lmname"><a href="#">{$article.cat_name}</a></li>
+          <li class="timer">{date('Y-m-d H:i:s',$article.pubtime)}</li>
+          <li class="like">{$article.comment_num} 评论数</li>
+          <li class="view"><a href="{C('domain.main')}/index.php?p=home&m=index&a=showReadMore&id={$article.id}">阅读更多</a></li>
+        </ul>
+      </div>
+    </div>
+    {/foreach}
+    <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+      <ul class="pagination">
+        <li>{$pageHtml}</li>
+      </ul>
+    </div>
+  </div>
+  <!--首页中间博文展示区结束-->
+  <!-- 特别推荐开始  排版3个-->
+  <div class="sidebar">
+      <div class="zhuanti">
+      <h2 class="hometitle">最新博文</h2>
+      <ul>
+        {foreach from=$zuixin key='zuixin_key' item='zuixin3'}
+        <li> <i><img src="{C('domain.main')}/public/home/images/banner0{$zuixin_key+3}.jpg"></i>
+          <p>{$zuixin3.title} <span><a href="{C('domain.main')}/index.php?p=home&m=index&a=showReadMore&id={$zuixin3.id}">阅读</a></span> </p>
+        </li>
+        {/foreach}
+      </ul>
+    </div>
+
+    <!-- 特别推荐结束 -->
+    <div class="cloud">
+      <h2 class="hometitle">标签云</h2>
+      <ul>
+        <a href="#">PHP基础</a> <a href="#">PHP数组</a> <a href="#">HTML+CSS</a> <a href="/">smarty模板技术</a> <a href="/">SESSION+COOKIE</a> <a href="/">绝对定位</a> <a href="/">自动加载</a> <a href="/">MVC设计模式</a><a href="/">frame</a> <a href="/">iframe</a> <a href="/">表单</a> <a href="/">浮动</a>
+      </ul>
+    </div>
+    <div class="links">
+      <h2 class="hometitle">友情链接</h2>
+      <ul>
+        <li><a href="#">CSDN博客</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">新浪微博</a></li>
+      </ul>
+    </div>
+  </div>
+</article>
+<footer>
+  <p>Design by <a href="#">编程语言学习博客中心</a> <a href="/">粤ICP备11002373号-1</a></p>
+</footer>
+<a href="#asd" class="cd-top">Top</a>
+</body>
+</html>
+
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="{C('domain.main')}/public/admin/css/admin.css">
+<link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pagination.css">
+<script src="{C('domain.main')}/public/admin/js/jquery.js"></script>
+<script src="{C('domain.main')}/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong> 内容列表</strong></div>
+  <div class="padding border-bottom">  
+  <button type="button" class="button border-yellow" > 所有的用户信息</button>
+  </div>
+  <table class="table table-hover text-center">
+    <tr>
+      <th width="5%">序号</th>
+      <th width="5%">ID</th>
+      <th width="10%">账户</th>
+      <th width="10%">性别</th>
+      <th width="20%">添加时间</th>
+      <th width="10%">用户类型</th>
+      <th width="20%">操作</th>
+    </tr>
+   {foreach from=$users key='users_key' item='user'}
+    <tr>
+      <td>{$firstNum+$users_key}</td>
+      <td>{$user.id}</td>
+      <td>{$user.acc}</td>
+      <td>{$user.sex}</td>
+      <td>{date('Y-m-d H:i:s',$user.regtime)}</td>
+      <td>{if $user.type=='0'}普通用户{else}管理员{/if}</td>
+      <td><div class="button-group">
+      <a class="button border-main" href="{C('domain.main')}/index.php?p=admin&m=user&a=userEdit&id={$user.id}"> 修改</a>
+      <a class="button border-red" href="{C('domain.main')}/index.php?p=admin&m=user&a=userDelete&id={$user.id}" onClick="return confirm('确定删除当前博文：{$user.acc}?');"> 删除</a>
+      </div></td>
+    </tr>
+  {/foreach}
+  </table>
+</div>
+<ul class="pagination">
+  <li>{$pageHtml}</li>
+</ul>
+</body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>博文信息</title>
+    <link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pintuer.css">
+    <link rel="stylesheet" href="{C('domain.main')}/public/admin/css/admin.css">
+    <link rel="stylesheet" href="{C('domain.main')}/public/admin/css/pagination.css">
+    <script src="{C('domain.main')}/public/admin/js/jquery.js"></script>
+    <script src="{C('domain.main')}/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong> 博文信息</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="{C('domain.main')}/index.php?p=admin&m=article&a=articleList" enctype="multipart/form-data">
+      <div class="form-group">
+        <div class="label">
+          <label>标题：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="title" value="{$title}" data-validate="required:请输入要搜索的标题"/>
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>选择分类：</label>
+        </div>
+        <div class="field">
+          <select name="cat_id" style="height:40px;width:250px;padding-left:12px;border:1px solid #dddddd;" >
+            <option vlaues="0">---请选择分类---</option>
+            {foreach from=$cats item='cat'}
+            <option value="{$cat.id}" {if $cat.id==$cat_id} selected {/if} >{str_repeat('---',$cat.level)}{$cat.name}</option>
+            {/foreach}
+          </select>
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="field">
+          <button class="button bg-main" type="submit" style="margin-left: 100px;"> 搜索</button>
+        </div>
+      </div>
+    </form>
+  <table class="table table-hover text-center">
+    <tr>
+      <th width="5%">序号</th>
+      <th width="5%">ID</th>
+      <th width="14%">分类</th>
+      <th width="11%">标题</th>
+      <th width="15%">发布时间</th>
+      <th width="8%">发布者</th>
+      <th width="7%">评论数量</th>
+      <th width="20%">操作</th>
+    </tr>
+    {foreach from=$articles key='articles_key' item='article'}
+    <tr>
+      <td>{$firstNum+$articles_key}</td>
+      <td>{$article.id}</td>
+      <td>{$article.cat_name}</td>
+      <td>{$article.title}</td>
+      <td>{date('Y-m-d H:i:s',$article.pubtime)}</td>
+      <td>{$article.user_nickname}</td>
+      <td>{$article.comment_num}</td>
+      <td><div class="button-group">
+        <a class="button border-main" href="{C('domain.main')}/index.php?p=admin&m=article&a=editArticleShow&id={$article.id}"> 修改</a>
+        <a class="button border-red" href="{C('domain.main')}/index.php?p=admin&m=article&a=deleteArticle&id={$article.id}" onClick="return confirm('确定删除当前博文：{$article.title}?');"> 删除</a>
+      </div></td>
+    </tr>
+    {/foreach}
+  </table>
+  </div>
+<ul class="pagination">
+  <li>{$pageHtml}</li>
+</ul>
+</body>
+</html>

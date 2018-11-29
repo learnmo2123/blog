@@ -1,0 +1,82 @@
+{include file="Common/head.html"}
+<div class="pagebg ab"> </div>
+<div class="container">
+    <h1 class="t_nav"><span>学习他人之优点,方能补自身所不足,阅读让彼此快乐,分享让生活添彩</span><a href="#" class="n1">阅读更多</a><a href="#" class="n2">发表评论</a></h1>
+    <div class="sidebar">
+        <div class="about">
+            <p class="avatar"> <img src="{if isset($smarty.session.home)} {$smarty.session.home.headimg} {else} {C('domain.main')}/public/home/images/avatar.jpg {/if} " alt="loading....."> </p>
+            <p class="abname">LEARNMO | {if isset($smarty.session.home)} {$smarty.session.home.nickname} {else} 青春 {/if}</p>
+            <p class="abposition">系统架构</p>
+            <p class="abtext"> 编程语言学习博客中心初衷，为了方便Developmental Engineer 总结开发经验和分享编程相关的知识，后期将不断完善本系统，谢谢大家的使用！</p>
+        </div>
+        <!--不可delete-->
+        <div class="links">
+            <h2 class="hometitle">友情链接</h2>
+            <ul>
+                <li><a href="#">CSDN博客</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">新浪微博</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--阅读更多-->
+    <div class="blogsbox">
+        <!-- 单条数据不接受foreach  java中可以 这种错不太好查-->
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="#" target="_blank">{$article.title}</a></h3>
+            <p class="blogtext">{$article.intro} </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="#">{$article.user_nickname}</a></li>
+                    <li class="lmname"><a href="#">{$article.cat_name}</a></li>
+                    <li class="timer">发布时间：{date('Y-m-d H:i:s',$article.pubtime)}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+           {$article.content}
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <div>此博文目前有: {$article.comment_num} 条评论</div>
+        </div>
+        {foreach from=$comment item='comments'}
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" style="width:712px;">
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="#">{$comments.user_nickname}</a></li>
+                    <li class="timer">{date('Y-m-d H:i',$comments.post_date)}</li>
+                </ul>
+            </div>
+            <span style="display:block;margin:13px 10px;text-indent:2em;">{$comments.content}</span>
+        </div>
+        {/foreach}
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <ul class="pagination">
+                <li>{$pageHtml}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="news_infos">
+        <form method="post" action="{C('domain.main')}/index.php?p=home&m=index&a=publish">
+            <textarea rows="6" cols="90" style="border:1px solid deepskyblue;font-size:15px;padding-left:10px;padding-top:7px;" name="comment" placeholder="输入您的评论"></textarea>
+            <input type="hidden" name="article_title" value="{$article.title}"/>
+            <input type="hidden" name="article_id" value="{$article.id}"/>
+            {if isset($smarty.session.home)}
+            <input type="submit" value="发表评论" class="fabiao">
+            {else}
+            尊敬的用户,您还未登录呢,无法进行评论......
+            {/if}
+        </form>
+    </div>
+
+
+
+</div>
+
+<footer>
+    <p>Design by <a href="#">编程语言学习博客中心</a> <a href="/">粤ICP备11002373号-1</a></p>
+</footer>
+<a href="#asd" class="cd-top">Top</a>
+</body>
+</html>

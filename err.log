@@ -1,0 +1,216 @@
+出错的时间：2018-09-14 09:22:18
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '')' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-14 09:22:45
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '')' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-14 16:58:29
+错误的错误码值：42S22
+错误的行号：46
+错误的信息：SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tidfgdfgtle' in 'field list'
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 12:01:08
+错误的错误码值：42S02
+错误的行号：58
+错误的信息：SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.article' doesn't exist
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 12:01:33
+错误的错误码值：42S02
+错误的行号：58
+错误的信息：SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.article' doesn't exist
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 14:24:14
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 14:31:42
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 14:37:07
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 15:28:00
+错误的错误码值：HY000
+错误的行号：46
+错误的信息：SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 15:28:46
+错误的错误码值：HY000
+错误的行号：46
+错误的信息：SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 15:36:50
+错误的错误码值：HY000
+错误的行号：46
+错误的信息：SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 15:43:03
+错误的错误码值：42S02
+错误的行号：72
+错误的信息：SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.bg_advcie' doesn't exist
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 16:54:16
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by liuyan_time desc limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 16:54:29
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by liuyan_time desc limit 3,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 17:48:43
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 17:49:57
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 17:51:50
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 17:55:22
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 17:56:14
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 17:58:56
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 18:00:05
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 18:00:13
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 18:01:41
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 18:02:05
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 18:05:23
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 18:23:21
+错误的错误码值：42000
+错误的行号：72
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,3' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 22:43:54
+错误的错误码值：42S22
+错误的行号：46
+错误的信息：SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title' in 'field list'
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 22:45:19
+错误的错误码值：22001
+错误的行号：46
+错误的信息：SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'yz_pic' at row 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 22:52:07
+错误的错误码值：22001
+错误的行号：46
+错误的信息：SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'yz_pic' at row 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 22:54:54
+错误的错误码值：22001
+错误的行号：46
+错误的信息：SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'yz_pic' at row 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 22:56:06
+错误的错误码值：HY000
+错误的行号：46
+错误的信息：SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '工作经验' for column 'cat_yz_name' at row 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 22:56:27
+错误的错误码值：HY000
+错误的行号：46
+错误的信息：SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '工作经验' for column 'cat_yz_name' at row 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-16 23:07:27
+错误的错误码值：22001
+错误的行号：46
+错误的信息：SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'yz_title' at row 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-17 14:12:25
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2, '小可爱')' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-17 14:13:26
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2, '小可爱')' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
+出错的时间：2018-09-17 14:14:34
+错误的错误码值：42000
+错误的行号：46
+错误的信息：SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2, '小可爱')' at line 1
+出错的文件：D:\blog\core\Model.class.php
+==========================================
